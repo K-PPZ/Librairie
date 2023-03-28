@@ -33,7 +33,11 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: white;
     position: fixed;
-    margin-bottom: 10%;
+    top: 0;
+    // left: 0;
+    // margin: 0;
+    // margin-bottom: 100px;
+    // padding: 1%;
 }
 
 button {
@@ -75,8 +79,12 @@ button:active {
     }
 }
 
+.libs {
+    margin-top: 80px;
+}
+
 // HEADER //
-header {
+main {
     background-color: #465268;
     color: white;
     display: flex;
