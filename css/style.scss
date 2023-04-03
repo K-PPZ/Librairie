@@ -122,6 +122,15 @@ body {
     display: block;
 }
 
+.bienvenue_librairie_off {
+    display: none;
+}
+
+.bienvenue_librairie_on {
+    display: block;
+    font-size: 20px;
+}
+
 #menu {
     display: flex;
     justify-content: space-evenly;
@@ -182,23 +191,43 @@ body {
 
     & section {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: column;
         width: 100%;
-        height: 50%;
+        height: 40%;
         margin: 20px 0 150px 0;
         box-shadow: 0px 0px 10px 0px #000000;
         background-color: white;
     
         & .title_section {
             width: 100%;
+            height: 20%;
             display: flex;
             align-items: flex-start;
+            color: transparent;
+            background: #666666;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
         }
 
         & h1 {
-            font-size: 20px;
+            font-size: 25px;
             font-family: 'Raleway', sans-serif;
+        }
+
+        & #resultat {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+
+            & div {
+                width: 100%;
+            }
         }
     }
 }

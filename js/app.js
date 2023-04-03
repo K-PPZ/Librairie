@@ -8,6 +8,8 @@ let value_js = false;
 
 let title_page = document.getElementById("title_page");
 
+let bienvenue = document.getElementById("bienvenue");
+
 html_css.addEventListener("click", () => {
     if (value_html == false) {
         title_page.innerText = "HTML/CSS";
@@ -43,6 +45,14 @@ lib_js.addEventListener("click", () => {
     html.classList.add("html_hidden");
     value_html = false;
 });
+
+if (value_html == true && value_js == true) {
+    bienvenue.classList.remove("bienvenue_librairie_off");
+    bienvenue.classList.add("bienvenue_librairie_on");
+} else {
+    bienvenue.classList.remove("bienvenue_librairie_on");
+    bienvenue.classList.add("bienvenue_librairie_off");
+}
 
 /*
 // RANDOM //
