@@ -5,36 +5,44 @@
 body {
     height: 100vh;
     margin: 0;
-    // background-color: rgba(0, 0, 0, 0.1);
-    // background-color: rgb(202, 202, 255);
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 // NAVBAR //
 #nav_bar {
+    @include center();
     background-color: #465268;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     margin-bottom: 2%;
+    width: 100%;
+    height: 70%;
 
     & #left {
         width: 50%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center();
 
         & h1 {
             font-family: 'Lato', sans-serif;
-            color: #ED7150;
+            color: white;
             font-size: 45px;
+        }
+        
+        & h1::before {
+            content: '"';
+            color: #ED7150;
+        }
     
-            & span {
-                color: white;
-            }
+        & h1::after {
+            content: '"';
+            color: #ED7150;
         }
     }
 
@@ -51,22 +59,63 @@ body {
             height: 100%;
             margin: 0;
             width: 50%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            @include center();
 
-            & a {
+            & ul {
                 width: 100%;
-                color: white;
-                text-decoration: none;
-                text-align: center;
-                padding: 1%;
-            }
+                height: 100%;
+                @include center();
 
-            & a:hover {
-                background-color: #ED7150;
-                border-radius: 10px;
+                & li {
+                    list-style: none;
+                    width: 50%;
+                    height: 100%;
+                    @include center();
+
+                    & a {
+                        text-decoration: none;
+                        color: white;
+                        width: 100%;
+                        height: 20%;
+                        @include center();
+                    }
+
+                    & a:hover {
+                        background-color: #ED7150;
+                        border-radius: 10px;
+                    }
+                }
             }
+        }
+    }
+}
+
+
+// TABLEAU //
+#title_table {
+    width: 30%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h2 {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+    }
+
+    & table {
+        width: 100%;
+        border: solid grey 1px;
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+
+        & td {
+            padding: 3% 1%;
+            font-size: 80%;
+            border: 1px solid black;
+            text-align: center;
         }
     }
 }
@@ -129,6 +178,10 @@ body {
 .bienvenue_librairie_on {
     display: block;
     font-size: 20px;
+}
+
+header {
+    margin-bottom: 15%;
 }
 
 #menu {
@@ -222,7 +275,7 @@ body {
             height: 90%;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: end;
             margin: 0;
 
             & div {
@@ -248,34 +301,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    #title_table {
-        width: 30%;
-        height: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        & h2 {
-            font-family: 'Lato', sans-serif;
-            text-align: center;
-        }
-    
-        & table {
-            width: 100%;
-            border: solid grey 1px;
-            font-family: 'Lato', sans-serif;
-            font-size: 20px;
-
-            & td {
-                padding: 3% 1%;
-                font-size: 80%;
-                border: 1px solid black;
-                text-align: center;
-            }
-        }
-    }
 }
 
 footer {
